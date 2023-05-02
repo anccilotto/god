@@ -5,45 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Layout</title>
+    <title>Info</title>
     <link rel="stylesheet" href="./css/estilo.css">
-
-    <script src="./js/script.js" defer></script>
-
-    <script>
-
-        //COMENTÁRIO DE LINHA
-
-        /*
-            COMENTÁRIO DE BLOCO
-        */
-
-        //Declarando variáveis com a palavra reservada ( var )
-        // var nr1 = 10;
-        // var nr2 = 5;
-
-        //Objetos que dão saida em informações no Javascript
-
-        //console.log(parâmetro) = Demonstra a saída no console da ferramenta do desenvolvedor.
-        // console.log(nr1 + nr2);
-        
-        //document.write(parâmetro) = Demonstra a saída na página html.
-        // document.write(nr1 + nr2);
-
-        //Atrelando um evento click à um elemento no HTML.
-        //<h2 id="titulo" class="tit-sec">Seção Fotos</h2>
-        // const h2Element = document.getElementById("titulo");
-
-        // console.log(h2Element.textContent);
-
-    </script>
-
 </head>
 
 <body>
-
-    <!-- CABEÇALHO -->
-    <!-- header>img+nav>a*3[href=#]{Item-$} -->
     <header class="cabecalho">
         <img src="./img/logo.png" alt="Monitor de computador.">
         <nav>
@@ -53,46 +19,63 @@
         </nav>
 
     </header>
-    <!-- CABEÇALHO -->
 
-    <h2 id="titulo" class="tit-sec">Seção Fotos</h2>
+    <h2 class="tit-sec">Informações Gerais</h2>
 
-    <!-- <script>
-        const h2Element = document.getElementById("titulo");
-        console.log(h2Element.textContent);
-    </script> -->
-
-    <!-- CONTEÚDO -->
-    <!-- section.conteudo>div*6>img+p{Legenda} -->
     <section class="conteudo">
         <div>
             <img src="./img/lobo1.jpg" alt="Lobo">
             <p>Legenda</p>
         </div>
-        <div>
-            <img src="./img/lobo2.jpg" alt="Lobo">
-            <p>Legenda</p>
-        </div>
-        <div>
-            <img src="./img/lobo3.jpg" alt="Lobo">
-            <p>Legenda</p>
-        </div>
-        <div>
-            <img src="./img/lobo4.jpg" alt="Lobo">
-            <p>Legenda</p>
-        </div>
-        <div>
-            <img src="./img/lobo5.jpg" alt="Lobo">
-            <p>Legenda</p>
-        </div>
-        <div>
-            <img src="./img/lobo6.jpg" alt="Lobo">
-            <p>Legenda</p>
-        </div>
     </section>
-    <!-- CONTEÚDO -->
 
-    <!-- RODAPÉ -->
+
+    <table>
+        <tr>
+            <th>Nome científico</th>
+            <th>Espécie</th>
+            <th>Pelagem</th>
+            <th>Habitat</th>
+            <th>Incidência</th>
+        </tr>
+        <tr>
+            <td colspan="2">Canis Lupus</td>
+            <!-- <td>Canídeo</td> -->
+            <td>Cinzenta</td>
+            <td>Floresta</td>
+            <td>América do Norte</td>
+        </tr>
+        <tr>
+            <td>Canis Rufus</td>
+            <td>Canídeo</td>
+            <td>Preta</td>
+            <td>Mata</td>
+            <td>Europa</td>
+        </tr>
+        <tr>
+            <td>Chrysocyon brachyuru</td>
+            <td>Canídeo</td>
+            <td>Marrom</td>
+            <td>Pampas</td>
+            <td>América do Sul</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Canis Simensis</td>
+            <td>Canídeo</td>
+            <td>Marrom</td>
+            <td>Deserto</td>
+            <td>Ásia</td>
+        </tr>
+        <tr>
+            <!-- <td>Vulpes vulpes</td> -->
+            <td>Canídeo</td>
+            <td>Marrom</td>
+            <td>Floresta / Campo</td>
+            <td>Américas / Europa /Ásia</td>
+        </tr>
+    </table>
+
+
     <footer class="rodape">
         <h2>Fale Conosco</h2>
 
