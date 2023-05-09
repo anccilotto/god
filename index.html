@@ -8,6 +8,8 @@
     <title>My Layout</title>
     <link rel="stylesheet" href="./css/estilo.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <script src="./js/script.js" defer></script>
 
     <script>
@@ -63,7 +65,7 @@
     </script> -->
 
     <!-- CONTEÚDO -->
-    <!-- section.conteudo>div*6>img+p{Legenda} -->
+    <!-- section.conteudo>div*6>img+p{Legenda}
     <section class="conteudo">
         <div>
             <img src="./img/lobo1.jpg" alt="Lobo">
@@ -89,7 +91,7 @@
             <img src="./img/lobo6.jpg" alt="Lobo">
             <p>Legenda</p>
         </div>
-    </section>
+    </section> -->
     <!-- CONTEÚDO -->
 
     <!-- RODAPÉ -->
@@ -97,23 +99,24 @@
         <h2>Fale Conosco</h2>
 
         <div>
-            <form action="/gabriel" method="post" onsubmit="return true">
+            <form action="index.html" method="get" onsubmit="return false">
                 <fieldset>
-                    <legend>Contato</legend>
+                    <legend>Entrar</legend>
                     <div>
                         <label for="idEmail">Email</label>
-                        <input type="email" name="txtEmail" id="idEmail" required placeholder="Email">
+                        <input type="email" name="txtEmail" id="idEmail" placeholder="Email" pattern="[A-Za-z0-9]">
                     </div>
                     <div>
                         <label for="idPass">Senha</label>
-                        <input type="password" name="txtPass" id="idPass" required placeholder="Senha">
+                        <input type="password" name="txtPass" id="idPass" placeholder="Senha">
+                        <i class="fa fa-eye" aria-hidden="true"></i>
                     </div>
                     <div>
                         <label for="idGrava">Guardar Dados</label>
-                        <input type="checkbox" name="txtGrava" id="idGrava" required>
+                        <input type="checkbox" name="txtGrava" id="idGrava">
                     </div>
                     <div>
-                        <input type="submit" value="Enviar">
+                        <button type="submit" id="btnSubmit">Entrar</button>
                     </div>
                 </fieldset>
             </form>
@@ -128,5 +131,6 @@
     </footer>
     <!-- RODAPÉ -->
 </body>
-
+ 
 </html>
+
