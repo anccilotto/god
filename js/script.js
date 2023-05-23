@@ -119,38 +119,54 @@
 //     img.setAttribute("style","width:30%;")
 // });
  
-const inputUser = document.querySelector("input[type='email']");
+// const inputUser = document.querySelector("input[type='email']");
 
-inputUser.addEventListener("focus", ()=>{
-    inputUser.setAttribute("style","outline-color:#ff0000;");
-});
+// inputUser.addEventListener("focus", ()=>{
+//     inputUser.setAttribute("style","outline-color:#ff0000;");
+// });
 
-inputUser.addEventListener("keyup", ()=>{
-    const lblUser = document.querySelector("label[for='idEmail']");
-    if(inputUser.value.length < 5){
-        lblUser.innerHTML = "<span style='color:#ff0000;'>Email(Mínimo de 5 caractéres)</span>"
-        inputUser.setAttribute("style","outline-color:#ff0000;");
-    }else{
-        lblUser.innerHTML = "<span style='color:#00ff00;'>Email</span>"
-        inputUser.setAttribute("style","outline-color:#00ff00;");
-    }
-});
+// inputUser.addEventListener("keyup", ()=>{
+//     const lblUser = document.querySelector("label[for='idEmail']");
+//     if(inputUser.value.length < 5){
+//         lblUser.innerHTML = "<span style='color:#ff0000;'>Email(Mínimo de 5 caractéres)</span>"
+//         inputUser.setAttribute("style","outline-color:#ff0000;");
+//     }else{
+//         lblUser.innerHTML = "<span style='color:#00ff00;'>Email</span>"
+//         inputUser.setAttribute("style","outline-color:#00ff00;");
+//     }
+// });
 
-//MOSTRAR A SENHA
-const eyePass = document.querySelector(".fa-eye");
+// //MOSTRAR A SENHA
+// const eyePass = document.querySelector(".fa-eye");
 
-eyePass.addEventListener("click",()=>{
-    const inputPass = document.querySelector("#idPass");
+// eyePass.addEventListener("click",()=>{
+//     const inputPass = document.querySelector("#idPass");
 
-    //Alterar o type
-    if(inputPass.getAttribute("type") == "password"){
-        inputPass.setAttribute("type","text");
-    }else{
-        inputPass.setAttribute("type","password");
-    }
-});
+//     //Alterar o type
+//     if(inputPass.getAttribute("type") == "password"){
+//         inputPass.setAttribute("type","text");
+//     }else{
+//         inputPass.setAttribute("type","password");
+//     }
+// });
+if(localStorage.getItem("user-token")){
+    const divWelcome = document.querySelector("#welcome");
+    const usuarioValidado = JSON.parse(localStorage.getItem("user-validado"));
+    divWelcome.innerHTML = usuarioValidado.nomeCompleto;
 
+    const imgAvatar = document.querySelector("#avatar");
+    imgAvatar.src = usuarioValidado.avatar;
 
+    const botaoSair = document.querySelector("#btnSair");
+    botaoSair.addEventListener("click",()=>{
+        localStorage.removeItem("user-token");
+        localStorage.removeItem("user-validado");
+        window.location.href = "../pages/login.html";    
+    });
+
+}else{
+    window.location.href = "../pages/login.html";
+}
 
     
 
